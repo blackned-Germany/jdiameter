@@ -13,8 +13,8 @@
 	<url>http://code.google.com/p/jdiameter/</url>
 
 	<ciManagement>
-		<system>Hudson</system>
-		<url>https://mobicents.ci.cloudbees.com/job/Mobicents-Diameter-Testsuite/</url>
+		<system>Jenkins</system>
+		<url>http://bned-jenkins.blackned.intern:8080/view/3rd%20Party/job/jdiameter/</url>
 	</ciManagement>
 
 	<developers>
@@ -140,9 +140,9 @@
 	</pluginRepositories>
 
 	<scm>
-		<connection>scm:git:https://code.google.com/p/jdiameter/</connection>
-		<developerConnection>scm:git:https://code.google.com/p/jdiameter/</developerConnection>
-		<url>https://code.google.com/p/jdiameter/</url>
+		<connection>scm:git:git@bned-gitlab.blackned.intern:opensource/jdiameter.git</connection>
+		<developerConnection>scm:git:git@bned-gitlab.blackned.intern:opensource/jdiameter.git</developerConnection>
+		<url>http://bned-gitlab.blackned.intern/opensource/jdiameter</url>
 	</scm>
 
 	<dependencies>
