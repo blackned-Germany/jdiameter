@@ -4,7 +4,7 @@
 
 	<groupId>org.mobicents.diameter</groupId>
 	<artifactId>diameter-parent</artifactId>
-	<version>1.6.0</version>
+	<version>1.7.0-SNAPSHOT</version>
 
 	<packaging>pom</packaging>
 
@@ -162,5 +162,18 @@
 			<version>1.9.12</version>
 		</dependency>
 	</dependencies>
+
+	<distributionManagement>
+		<repository>
+			<id>nexus.release</id>
+			<name>Blackned Release Repository</name>
+			<url>http://bned-nexus.blackned.intern:8081/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus.snapshots</id>
+			<name>Blackned Snapshot Repository</name>
+			<url>http://bned-nexus.blackned.intern:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>
