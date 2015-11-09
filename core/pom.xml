@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.mobicents.diameter</groupId>
 		<artifactId>diameter-parent</artifactId>
-		<version>1.6.0.FINAL</version>
+		<version>1.6.0</version>
 	</parent>
 
 	<packaging>pom</packaging>
@@ -16,24 +16,7 @@
 
 	<modules>
 		<module>jdiameter</module>
-		<module>jdiameter-ha</module>
-		<module>mux</module>
 	</modules>
-
-	<build>
-		<plugins>
-			<plugin>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<groupId>org.mobicents.tools</groupId>
-				<inherited>false</inherited>
-				<executions />
-				<configuration>
-					<eclipseProjectName>mobicents-diameter-core</eclipseProjectName>
-					<generateProjectsForModules>false</generateProjectsForModules>
-				</configuration>
-			</plugin>
-		</plugins>       
-	</build>
 
 	<profiles>
 		<profile>

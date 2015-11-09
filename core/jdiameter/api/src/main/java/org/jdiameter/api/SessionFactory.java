@@ -106,4 +106,6 @@ public interface SessionFactory {
    */
 
   <T extends AppSession> T getNewAppSession(String sessionId, ApplicationId applicationId, Class<? extends AppSession> userSession) throws InternalException;
+
+
 }

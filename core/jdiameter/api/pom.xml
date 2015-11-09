@@ -4,12 +4,36 @@
 	<parent>
 		<groupId>org.mobicents.diameter</groupId>
 		<artifactId>jdiameter-parent</artifactId>
-		<version>1.6.0.FINAL</version>
+		<version>1.6.0</version>
 	</parent>
 
 	<artifactId>jdiameter-api</artifactId>
 
 	<name>Mobicents :: Diameter Stack :: ${pom.artifactId}</name>
+	<packaging>bundle</packaging>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-scr-plugin</artifactId>
+				<version>1.20.0</version>
+				<executions>
+					<execution>
+						<id>generate-scr-descriptor</id>
+						<goals>
+							<goal>scr</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 
 	<dependencies />
 
