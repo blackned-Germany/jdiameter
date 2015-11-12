@@ -494,12 +494,6 @@ public class DictionaryImpl implements Dictionary {
     }
   }
 
-  /**
-   * @param doc
-   * @param nameToCode
-   * @param avpMap
-   * @return
-   */
   private void parseCommands(Document doc) {
     // here all grouped AVPs should have proper filling.
     // now lets go through message definition, we have to respect application nodes

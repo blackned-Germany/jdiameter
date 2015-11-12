@@ -22,7 +22,6 @@
 
 package org.jdiameter.server.impl.agent;
 
-import org.apache.log4j.Logger;
 import org.jdiameter.api.Answer;
 import org.jdiameter.api.Request;
 import org.jdiameter.client.api.IContainer;
@@ -30,6 +29,8 @@ import org.jdiameter.client.api.IRequest;
 import org.jdiameter.client.api.controller.IRealm;
 import org.jdiameter.client.api.controller.IRealmTable;
 import org.jdiameter.server.api.agent.IProxy;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * 
@@ -38,7 +39,7 @@ import org.jdiameter.server.api.agent.IProxy;
  */
 public class ProxyAgentImpl extends AgentImpl implements IProxy {
 
-  private static Logger logger = Logger.getLogger(ProxyAgentImpl.class);
+  private static Logger logger = LoggerFactory.getLogger(ProxyAgentImpl.class);
 
 	/**
 	 * @param container
@@ -56,7 +57,6 @@ public class ProxyAgentImpl extends AgentImpl implements IProxy {
 	 * org.jdiameter.server.api.agent.IAgent#processRequest(org.jdiameter.client
 	 * .api.IRequest, org.jdiameter.client.api.controller.IRealm)
 	 */
-	@Override
 	public Answer processRequest(IRequest request, IRealm matchedRealm) {
 		logger.info("proxy agent: processRequest executed");
 		return null;
@@ -69,7 +69,6 @@ public class ProxyAgentImpl extends AgentImpl implements IProxy {
 	 * org.jdiameter.api.EventListener#receivedSuccessMessage(org.jdiameter.
 	 * api.Message, org.jdiameter.api.Message)
 	 */
-	@Override
 	public void receivedSuccessMessage(Request request, Answer answer) {
 		logger.info("proxy agent: receivedSuccessMessage");
 	}
@@ -80,7 +79,6 @@ public class ProxyAgentImpl extends AgentImpl implements IProxy {
 	 * @see
 	 * org.jdiameter.api.EventListener#timeoutExpired(org.jdiameter.api.Message)
 	 */
-	@Override
 	public void timeoutExpired(Request request) {
 		logger.info("proxy agent: timeoutExpired");
 	}
