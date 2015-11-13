@@ -5,11 +5,11 @@
 	<parent>
 		<groupId>org.mobicents.diameter</groupId>
 		<artifactId>diameter-core-parent</artifactId>
-		<version>1.6.1</version>
+		<version>1.6.3</version>
 	</parent>
 
 	<artifactId>jdiameter-parent</artifactId>
-	<version>1.6.1</version>
+	<version>1.6.3</version>
 
 	<packaging>pom</packaging>
 
@@ -19,12 +19,6 @@
 		<module>api</module>
 		<module>impl</module>
 	</modules>
-
-	<properties>
-		<slf4j.version>1.5.8</slf4j.version>
-		<picocontainer.version>2.13.5</picocontainer.version>
-		<commons-pool.version>1.5.5</commons-pool.version>
-	</properties>
 
 	<profiles>
 		<profile>
@@ -46,7 +40,5 @@
 			</build>
 		</profile>
 	</profiles>
-
-
 
 </project>

@@ -5,11 +5,11 @@
 	<parent>
 		<groupId>org.mobicents.diameter</groupId>
 		<artifactId>jdiameter-parent</artifactId>
-		<version>1.6.1</version>
+		<version>1.6.3</version>
 	</parent>
 
 	<artifactId>jdiameter-impl</artifactId>
-	<version>1.6.1</version>
+	<version>1.6.3</version>
 
 	<name>Mobicents :: Diameter Stack :: ${pom.artifactId}</name>
 	<packaging>bundle</packaging>
@@ -25,24 +25,19 @@
 			<version>${pom.version}</version>
 		</dependency>
 		<dependency>
-			<artifactId>picocontainer</artifactId>
 			<groupId>org.picocontainer</groupId>
-			<version>${picocontainer.version}</version>
+			<artifactId>picocontainer</artifactId>
+			<version>2.15</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>${slf4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>${slf4j.version}</version>
+			<version>1.6.4</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-pool</groupId>
 			<artifactId>commons-pool</artifactId>
-			<version>${commons-pool.version}</version>
+			<version>1.6</version>
 		</dependency>
 		<dependency>
 			<groupId>org.mobicents.protocols.sctp</groupId>
