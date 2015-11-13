@@ -171,7 +171,6 @@ public class LocalTimerFacilityImpl implements ITimerFacility {
      * 
      * @see java.io.Externalizable#writeExternal(java.io.ObjectOutput)
      */
-    @Override
     public void writeExternal(ObjectOutput out) throws IOException {
       throw new IOException("Failed to serialize local timer!");
     }
@@ -181,7 +180,6 @@ public class LocalTimerFacilityImpl implements ITimerFacility {
      * 
      * @see java.io.Externalizable#readExternal(java.io.ObjectInput)
      */
-    @Override
     public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
       throw new IOException("Failed to deserialize local timer!");
     }
