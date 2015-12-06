@@ -379,7 +379,7 @@ public class RoSessionFactoryImpl implements IRoSessionFactory, ClientRoSessionL
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.app.StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
+   * @see StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
    */
   @SuppressWarnings("unchecked")
   public void stateChanged(AppSession source, Enum oldState, Enum newState) {

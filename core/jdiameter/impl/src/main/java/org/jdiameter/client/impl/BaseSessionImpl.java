@@ -22,6 +22,7 @@
 
 package org.jdiameter.client.impl;
 
+
 import org.jdiameter.api.*;
 import org.jdiameter.client.api.IContainer;
 import org.jdiameter.client.api.IEventListener;
@@ -69,14 +70,14 @@ public abstract class BaseSessionImpl implements BaseSession {
   }
 
   /* (non-Javadoc)
-   * @see org.jdiameter.api.BaseSession#isAppSession()
+   * @see BaseSession#isAppSession()
    */
   public boolean isAppSession() {
     return false;
   }
 
   /* (non-Javadoc)
-   * @see org.jdiameter.api.BaseSession#isReplicable()
+   * @see BaseSession#isReplicable()
    */
   public boolean isReplicable() {
     return false;

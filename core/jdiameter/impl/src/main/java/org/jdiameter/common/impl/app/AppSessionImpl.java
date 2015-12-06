@@ -114,7 +114,7 @@ public abstract class AppSessionImpl implements AppSession {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.BaseSession#getSessionId()
+   * @see BaseSession#getSessionId()
    */
   public String getSessionId() {
     //use local object, its faster :)
@@ -124,7 +124,7 @@ public abstract class AppSessionImpl implements AppSession {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.BaseSession#isAppSession()
+   * @see BaseSession#isAppSession()
    */
   public boolean isAppSession() {
     return true;
@@ -133,7 +133,7 @@ public abstract class AppSessionImpl implements AppSession {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.BaseSession#isReplicable()
+   * @see BaseSession#isReplicable()
    */
   public boolean isReplicable() {
     // FIXME: make this true?

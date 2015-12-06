@@ -41,7 +41,7 @@ public interface INetwork extends Network {
    * Return NetworkListener instance for specified application-id
    * @param message message
    * @return  NetworkListener instance for specified selector
-   * @see org.jdiameter.api.NetworkReqListener
+   * @see NetworkReqListener
    */
   NetworkReqListener getListener(IMessage message);
 

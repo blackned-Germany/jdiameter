@@ -22,6 +22,7 @@
 
 package org.jdiameter.client.impl;
 
+import org.jdiameter.api.IllegalDiameterStateException;
 import org.jdiameter.api.InternalException;
 
 /**
@@ -71,9 +72,9 @@ public interface StackImplMBean {
 
   /**
    * Run startd procedure
-   * @throws org.jdiameter.api.IllegalDiameterStateException
+   * @throws IllegalDiameterStateException
    * @throws InternalException
    */
-  void start()  throws org.jdiameter.api.IllegalDiameterStateException, InternalException;
+  void start()  throws IllegalDiameterStateException, InternalException;
 
 }

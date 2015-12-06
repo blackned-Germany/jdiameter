@@ -366,7 +366,7 @@ ClientAuthSessionListener, IClientAuthActionContext, IServerAuthActionContext, S
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.app.StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
+   * @see StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
    */
   @SuppressWarnings("unchecked")
   public void stateChanged(AppSession source, Enum oldState, Enum newState) {
@@ -378,7 +378,7 @@ ClientAuthSessionListener, IClientAuthActionContext, IServerAuthActionContext, S
   /*
    * (non-Javadoc)
    * 
-   * @seeorg.jdiameter.common.api.app.auth.IClientAuthActionContext#accessTimeoutElapses(org.jdiameter.api.auth.ClientAuthSession)
+   * @seeorg.jdiameter.common.api.app.auth.IClientAuthActionContext#accessTimeoutElapses(ClientAuthSession)
    */
   public void accessTimeoutElapses(ClientAuthSession session) throws InternalException {
     // TODO Auto-generated method stub
@@ -396,7 +396,7 @@ ClientAuthSessionListener, IClientAuthActionContext, IServerAuthActionContext, S
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.common.api.app.auth.IClientAuthActionContext#disconnectUserOrDev(org.jdiameter.api.auth.ClientAuthSession, org.jdiameter.api.Message)
+   * @see org.jdiameter.common.api.app.auth.IClientAuthActionContext#disconnectUserOrDev(ClientAuthSession, Message)
    */
   public void disconnectUserOrDev(ClientAuthSession session, Message request) throws InternalException {
     // TODO Auto-generated method stub
@@ -406,7 +406,7 @@ ClientAuthSessionListener, IClientAuthActionContext, IServerAuthActionContext, S
    * (non-Javadoc)
    * 
    * @seeorg.jdiameter.common.api.app.auth.IServerAuthActionContext#
-   * accessTimeoutElapses(org.jdiameter.api.auth.ServerAuthSession)
+   * accessTimeoutElapses(ServerAuthSession)
    */
   public void accessTimeoutElapses(ServerAuthSession session) throws InternalException {
     // TODO Auto-generated method stub

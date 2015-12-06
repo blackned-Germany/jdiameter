@@ -397,7 +397,7 @@ public class CCASessionFactoryImpl implements ICCASessionFactory, ClientCCASessi
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.app.StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
+   * @see StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
    */
   public void stateChanged(AppSession source, Enum oldState, Enum newState) {
     logger.info("Diameter CCA SessionFactory :: stateChanged :: source[{}], oldState[{}], newState[{}]", new Object[]{source, oldState, newState});

@@ -136,7 +136,7 @@ public class RedirectAgentImpl extends AgentImpl implements IRedirect {
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.EventListener#receivedSuccessMessage(org.jdiameter.api.Message, org.jdiameter.api.Message)
+   * @see EventListener#receivedSuccessMessage(Message, Message)
    */
   public void receivedSuccessMessage(Request request, Answer answer) {
     // TODO Auto-generated method stub
@@ -144,7 +144,7 @@ public class RedirectAgentImpl extends AgentImpl implements IRedirect {
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.EventListener#timeoutExpired(org.jdiameter.api.Message)
+   * @see EventListener#timeoutExpired(Message)
    */
   public void timeoutExpired(Request request) {
     // TODO Auto-generated method stub

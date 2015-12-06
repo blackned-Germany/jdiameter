@@ -52,8 +52,6 @@ import org.jdiameter.common.api.app.gx.IGxSessionData;
 import org.jdiameter.common.api.app.gx.IGxSessionFactory;
 import org.jdiameter.common.api.app.gx.IServerGxSessionContext;
 import org.jdiameter.common.api.data.ISessionDatasource;
-import org.jdiameter.common.impl.app.gx.GxReAuthAnswerImpl;
-import org.jdiameter.common.impl.app.gx.GxReAuthRequestImpl;
 import org.jdiameter.server.impl.app.gx.IServerGxSessionData;
 import org.jdiameter.server.impl.app.gx.ServerGxSessionImpl;
 import org.slf4j.Logger;
@@ -340,7 +338,7 @@ IGxMessageFactory, IServerGxSessionContext, IClientGxSessionContext {
    /*
     * (non-Javadoc)
     *
-    * @see org.jdiameter.api.app.StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
+    * @see StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
     */
    @SuppressWarnings("unchecked")
    public void stateChanged(AppSession source, Enum oldState, Enum newState) {

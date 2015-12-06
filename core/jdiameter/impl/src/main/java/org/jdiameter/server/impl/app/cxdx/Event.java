@@ -80,7 +80,7 @@ public class Event implements StateEvent{
   }
 
   /* (non-Javadoc)
-   * @see org.jdiameter.api.app.StateEvent#setData(java.lang.Object)
+   * @see StateEvent#setData(java.lang.Object)
    */
   public void setData(Object data) {
     try {

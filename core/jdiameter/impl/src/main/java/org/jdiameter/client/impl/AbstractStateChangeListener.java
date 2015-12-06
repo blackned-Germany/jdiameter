@@ -35,7 +35,7 @@ public abstract class AbstractStateChangeListener<T> implements StateChangeListe
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.app.StateChangeListener#stateChanged(java.lang.Enum, java.lang.Enum)
+   * @see StateChangeListener#stateChanged(java.lang.Enum, java.lang.Enum)
    */
   @SuppressWarnings("unchecked")
   public void stateChanged(Enum oldState, Enum newState) {
@@ -44,7 +44,7 @@ public abstract class AbstractStateChangeListener<T> implements StateChangeListe
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.app.StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
+   * @see StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
    */
   @SuppressWarnings("unchecked")
   public void stateChanged(T source, Enum oldState, Enum newState) {

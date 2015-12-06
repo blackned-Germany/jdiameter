@@ -44,14 +44,14 @@ public interface IContext {
    * Start connection procedure to remote peer
    * @throws InternalException
    * @throws IOException
-   * @throws org.jdiameter.api.IllegalDiameterStateException
+   * @throws IllegalDiameterStateException
    */
   void connect() throws InternalException, IOException, IllegalDiameterStateException;
 
   /**
    * Start disconnect procedure from remote peer
    * @throws InternalException
-   * @throws org.jdiameter.api.IllegalDiameterStateException
+   * @throws IllegalDiameterStateException
    */
   void disconnect() throws InternalException, IllegalDiameterStateException;
 

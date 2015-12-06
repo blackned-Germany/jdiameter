@@ -57,7 +57,6 @@ import org.jdiameter.common.api.app.s6a.S6aSessionState;
 import org.jdiameter.common.impl.app.AppAnswerEventImpl;
 import org.jdiameter.common.impl.app.AppRequestEventImpl;
 import org.jdiameter.common.impl.app.s6a.S6aSession;
-import org.jdiameter.server.impl.app.s6a.Event;
 import org.jdiameter.server.impl.app.s6a.Event.Type;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -126,7 +125,7 @@ public class S6aServerSessionImpl extends S6aSession implements ServerS6aSession
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.app.StateMachine#getState(java.lang.Class)
+   * @see StateMachine#getState(java.lang.Class)
    */
   @SuppressWarnings("unchecked")
   public <E> E getState(Class<E> stateType) {
@@ -135,7 +134,7 @@ public class S6aServerSessionImpl extends S6aSession implements ServerS6aSession
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.app.StateMachine#handleEvent(org.jdiameter.api.app.StateEvent)
+   * @see StateMachine#handleEvent(StateEvent)
    */
   public boolean handleEvent(StateEvent event) throws InternalException, OverloadException {
     try {
@@ -290,7 +289,7 @@ public class S6aServerSessionImpl extends S6aSession implements ServerS6aSession
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.EventListener#receivedSuccessMessage(org.jdiameter.api.Message, org.jdiameter.api.Message)
+   * @see EventListener#receivedSuccessMessage(Message, Message)
    */
   public void receivedSuccessMessage(Request request, Answer answer) {
     AnswerDelivery rd = new AnswerDelivery();
@@ -302,7 +301,7 @@ public class S6aServerSessionImpl extends S6aSession implements ServerS6aSession
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.EventListener#timeoutExpired(org.jdiameter.api.Message)
+   * @see EventListener#timeoutExpired(Message)
    */
   public void timeoutExpired(Request request) {
     try {
@@ -315,7 +314,7 @@ public class S6aServerSessionImpl extends S6aSession implements ServerS6aSession
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.NetworkReqListener#processRequest(org.jdiameter.api.Request)
+   * @see NetworkReqListener#processRequest(Request)
    */
   public Answer processRequest(Request request) {
     RequestDelivery rd = new RequestDelivery();

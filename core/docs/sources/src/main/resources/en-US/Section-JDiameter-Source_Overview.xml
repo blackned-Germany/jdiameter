@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [<!ENTITY % BOOK_ENTITIES SYSTEM "Diameter_User_Guide.ent">%BOOK_ENTITIES;]>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Diameter_User_Guide.ent">
+%BOOK_ENTITIES;
+]>
 
 <section id="jdiameter-source_overview">
 	<!-- TODO: Developer: add section per each app session and factory, explain how it is created -->
@@ -37,7 +40,7 @@
 		<para><classname>SessionFactory</classname> provides the stack user with access to session objects. It manages registered application session factories in order to allow for the creation of specific application sessions. A Session Factory instance can be obtained from the stack using the <methodname>getSessionFactory()</methodname> method. The base <classname>SessionFactory</classname> interface is defined below:</para>
 <programlisting role="JAVA" language="Java">package org.jdiameter.api;
 
-import org.jdiameter.api.app.AppSession;
+import AppSession;
 
 public interface SessionFactory {
 

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [<!ENTITY % BOOK_ENTITIES SYSTEM "Diameter_User_Guide.ent">%BOOK_ENTITIES;]>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Diameter_User_Guide.ent">
+%BOOK_ENTITIES;
+]>
 
 <section id="mux-source_overview">
 
@@ -55,10 +58,10 @@ package org.mobicents.diameter.stack;
 
 import java.io.Serializable;
 
-import org.jdiameter.api.Answer;
-import org.jdiameter.api.EventListener;
-import org.jdiameter.api.NetworkReqListener;
-import org.jdiameter.api.Request;
+import Answer;
+import EventListener;
+import NetworkReqListener;
+import Request;
 
 public interface DiameterListener extends NetworkReqListener, Serializable, 
 	EventListener&lt;Request, Answer&gt;

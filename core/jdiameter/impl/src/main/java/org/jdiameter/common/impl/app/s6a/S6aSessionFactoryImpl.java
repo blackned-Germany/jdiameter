@@ -189,7 +189,7 @@ public class S6aSessionFactoryImpl implements IS6aSessionFactory, ServerS6aSessi
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.common.api.app.IAppSessionFactory#getNewSession(java.lang.String, java.lang.Class, org.jdiameter.api.ApplicationId, java.lang.Object[])
+   * @see org.jdiameter.common.api.app.IAppSessionFactory#getNewSession(java.lang.String, java.lang.Class, ApplicationId, java.lang.Object[])
    */
   public AppSession getNewSession(String sessionId, Class<? extends AppSession> aClass, ApplicationId applicationId, Object[] args) {
     AppSession appSession = null;
@@ -237,7 +237,7 @@ public class S6aSessionFactoryImpl implements IS6aSessionFactory, ServerS6aSessi
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.app.StateChangeListener#stateChanged(java.lang.Enum, java.lang.Enum)
+   * @see StateChangeListener#stateChanged(java.lang.Enum, java.lang.Enum)
    */
   public void stateChanged(Enum oldState, Enum newState) {
     logger.info("Diameter S6a Session Factory :: stateChanged :: oldState[{}], newState[{}]", oldState, newState);
@@ -249,7 +249,7 @@ public class S6aSessionFactoryImpl implements IS6aSessionFactory, ServerS6aSessi
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.app.StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
+   * @see StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
    */
   public void stateChanged(AppSession source, Enum oldState, Enum newState) {
     logger.info("Diameter S6a Session Factory :: stateChanged :: Session, [{}], oldState[{}], newState[{}]", new Object[]{source, oldState, newState});
