@@ -273,7 +273,7 @@ public class PeerFSMImpl implements IStateMachine {
     // notify only when it's a new public state
     if (newState.getPublicState() != state.getPublicState()) {
       for (StateChangeListener l : listeners) {
-        l.stathanged(state.getPublicState(), newState.getPublicState());
+        l.stateChanged(state.getPublicState(), newState.getPublicState());
       }
     }
     getStates()[state.ordinal()].exitAction();
