@@ -77,7 +77,7 @@ public class AgentConfigurationImpl implements IAgentConfiguration {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.server.api.agent.IAgentConfiguration#parse(org.jdiameter .api.Configuration)
+   * @see org.jdiameter.server.api.agent.IAgentConfiguration#parse(org.jdiameter .Configuration)
    */
   public IAgentConfiguration parse(Configuration agentConfiguration) throws InternalException {
     if (agentConfiguration == null) {

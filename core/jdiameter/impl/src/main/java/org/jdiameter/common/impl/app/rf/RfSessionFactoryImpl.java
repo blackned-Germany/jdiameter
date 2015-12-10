@@ -235,7 +235,7 @@ StateChangeListener<AppSession> {
    * 
    * @see
    * org.jdiameter.common.api.app.acc.IAccSessionFactory#setApplicationId(
-   * org.jdiameter.api.ApplicationId)
+   * ApplicationId)
    */
   public void setApplicationId(ApplicationId id) {
     this.applicationId = id;
@@ -344,7 +344,7 @@ StateChangeListener<AppSession> {
    * (non-Javadoc)
    * 
    * @see
-   * org.jdiameter.api.app.StateChangeListener#stateChanged(java.lang.Object,
+   * StateChangeListener#stateChanged(java.lang.Object,
    * java.lang.Enum, java.lang.Enum)
    */
   @SuppressWarnings("unchecked")
@@ -378,7 +378,7 @@ StateChangeListener<AppSession> {
    * 
    * @see
    * org.jdiameter.common.api.app.Rf.IClientRfActionContext#disconnectUserOrDev
-   * (org.jdiameter.api.Request)
+   * (Request)
    */
   public void disconnectUserOrDev(ClientRfSession appSession, Request sessionTermRequest) throws InternalException {
     logger.info("disconnectUserOrDev :: appSession[" + appSession + "], Request[" + sessionTermRequest + "]");
@@ -389,7 +389,7 @@ StateChangeListener<AppSession> {
    * 
    * @see
    * org.jdiameter.common.api.app.Rf.IClientRfActionContext#failedSendRecord
-   * (org.jdiameter.api.Request)
+   * (Request)
    */
   public boolean failedSendRecord(ClientRfSession appSession, Request rfRequest) throws InternalException {
     logger.info("failedSendRecord :: appSession[" + appSession + "], Request[" + rfRequest + "]");
@@ -400,7 +400,7 @@ StateChangeListener<AppSession> {
    * (non-Javadoc)
    * 
    * @see org.jdiameter.common.api.app.acc.IClientAccActionContext#
-   * interimIntervalElapses(org.jdiameter.api.Request)
+   * interimIntervalElapses(Request)
    */
   public void interimIntervalElapses(ClientRfSession appSession, Request interimRequest) throws InternalException {
     logger.info("interimIntervalElapses :: appSession[" + appSession + "], Request[" + interimRequest + "]");

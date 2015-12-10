@@ -5,11 +5,11 @@
 	<parent>
 		<groupId>org.mobicents.diameter</groupId>
 		<artifactId>jdiameter-parent</artifactId>
-		<version>1.6.3</version>
+		<version>1.6.4</version>
 	</parent>
 
 	<artifactId>jdiameter-impl</artifactId>
-	<version>1.6.3</version>
+	<version>1.6.4</version>
 
 	<name>Mobicents :: Diameter Stack :: ${pom.artifactId}</name>
 	<packaging>bundle</packaging>
@@ -19,11 +19,6 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>${pom.groupId}</groupId>
-			<artifactId>jdiameter-api</artifactId>
-			<version>${pom.version}</version>
-		</dependency>
 		<dependency>
 			<groupId>org.picocontainer</groupId>
 			<artifactId>picocontainer</artifactId>

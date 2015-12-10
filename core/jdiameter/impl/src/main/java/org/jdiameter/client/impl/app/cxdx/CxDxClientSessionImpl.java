@@ -90,7 +90,7 @@ public class CxDxClientSessionImpl extends CxDxSession implements ClientCxDxSess
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.app.StateMachine#getState(java.lang.Class)
+   * @see StateMachine#getState(java.lang.Class)
    */
   @SuppressWarnings("unchecked")
   public <E> E getState(Class<E> stateType) {
@@ -99,7 +99,7 @@ public class CxDxClientSessionImpl extends CxDxSession implements ClientCxDxSess
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.NetworkReqListener#processRequest(org.jdiameter.api.Request)
+   * @see NetworkReqListener#processRequest(Request)
    */
   public Answer processRequest(Request request) {
     RequestDelivery rd  = new RequestDelivery();
@@ -111,7 +111,7 @@ public class CxDxClientSessionImpl extends CxDxSession implements ClientCxDxSess
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.cxdx.ClientCxDxSession#sendLocationInformationRequest(org.jdiameter.api.cxdx.events.JLocationInfoRequest)
+   * @see ClientCxDxSession#sendLocationInformationRequest(JLocationInfoRequest)
    */
   public void sendLocationInformationRequest(JLocationInfoRequest request) throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
     send(Event.Type.SEND_MESSAGE, request, null);
@@ -119,7 +119,7 @@ public class CxDxClientSessionImpl extends CxDxSession implements ClientCxDxSess
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.cxdx.ClientCxDxSession#sendMultimediaAuthRequest(org.jdiameter.api.cxdx.events.JMultimediaAuthRequest)
+   * @see ClientCxDxSession#sendMultimediaAuthRequest(JMultimediaAuthRequest)
    */
   public void sendMultimediaAuthRequest(JMultimediaAuthRequest request) throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
     send(Event.Type.SEND_MESSAGE, request, null);
@@ -127,7 +127,7 @@ public class CxDxClientSessionImpl extends CxDxSession implements ClientCxDxSess
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.cxdx.ClientCxDxSession#sendServerAssignmentRequest(org.jdiameter.api.cxdx.events.JServerAssignmentRequest)
+   * @see ClientCxDxSession#sendServerAssignmentRequest(JServerAssignmentRequest)
    */
   public void sendServerAssignmentRequest(JServerAssignmentRequest request) throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
     send(Event.Type.SEND_MESSAGE, request, null);
@@ -135,7 +135,7 @@ public class CxDxClientSessionImpl extends CxDxSession implements ClientCxDxSess
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.cxdx.ClientCxDxSession#sendUserAuthorizationRequest(org.jdiameter.api.cxdx.events.JUserAuthorizationRequest)
+   * @see ClientCxDxSession#sendUserAuthorizationRequest(JUserAuthorizationRequest)
    */
   public void sendUserAuthorizationRequest(JUserAuthorizationRequest request) throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
     send(Event.Type.SEND_MESSAGE, request, null);
@@ -143,7 +143,7 @@ public class CxDxClientSessionImpl extends CxDxSession implements ClientCxDxSess
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.cxdx.ClientCxDxSession#sendPushProfileAnswer(org.jdiameter.api.cxdx.events.JPushProfileAnswer)
+   * @see ClientCxDxSession#sendPushProfileAnswer(JPushProfileAnswer)
    */
   public void sendPushProfileAnswer(JPushProfileAnswer answer) throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
     send(Event.Type.SEND_MESSAGE, null, answer);
@@ -151,7 +151,7 @@ public class CxDxClientSessionImpl extends CxDxSession implements ClientCxDxSess
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.cxdx.ClientCxDxSession#sendRegistrationTerminationAnswer(org.jdiameter.api.cxdx.events.JRegistrationTerminationAnswer)
+   * @see ClientCxDxSession#sendRegistrationTerminationAnswer(JRegistrationTerminationAnswer)
    */
   public void sendRegistrationTerminationAnswer(JRegistrationTerminationAnswer answer) throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
     send(Event.Type.SEND_MESSAGE, null, answer);
@@ -159,7 +159,7 @@ public class CxDxClientSessionImpl extends CxDxSession implements ClientCxDxSess
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.EventListener#receivedSuccessMessage(org.jdiameter.api.Message, org.jdiameter.api.Message)
+   * @see EventListener#receivedSuccessMessage(Message, Message)
    */
   public void receivedSuccessMessage(Request request, Answer answer) {
     AnswerDelivery rd = new AnswerDelivery();
@@ -173,7 +173,7 @@ public class CxDxClientSessionImpl extends CxDxSession implements ClientCxDxSess
    * (non-Javadoc)
    * 
    * @see
-   * org.jdiameter.api.EventListener#timeoutExpired(org.jdiameter.api.Message)
+   * EventListener#timeoutExpired(Message)
    */
   public void timeoutExpired(Request request) {
     try {

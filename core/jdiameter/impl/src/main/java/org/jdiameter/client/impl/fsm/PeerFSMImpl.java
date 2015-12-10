@@ -42,6 +42,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 import org.jdiameter.api.Configuration;
 import org.jdiameter.api.DisconnectCause;
+import org.jdiameter.api.StatisticRecord;
 import org.jdiameter.api.Message;
 import org.jdiameter.api.OverloadException;
 import org.jdiameter.api.PeerState;
@@ -158,7 +159,7 @@ public class PeerFSMImpl implements IStateMachine {
             return 0;
           }
           IStatisticRecord mpta = queueStat.getRecordByName(IStatisticRecord.Counters.MessageProcessingTime.name());
-          org.jdiameter.api.StatisticRecord[] children = mpta.getChilds();
+          StatisticRecord[] children = mpta.getChilds();
           if (children.length == 2 && children[1].getValueAsLong() != 0) {
             long count = children[1].getValueAsLong();
             return ((float) children[0].getValueAsLong()) / ((float) (count != 0 ? count : 1));
@@ -356,7 +357,7 @@ public class PeerFSMImpl implements IStateMachine {
     }
   }
 
-  protected abstract class MyState implements org.jdiameter.api.app.State {
+  protected abstract class MyState implements State {
 
     public void entryAction() {
     }
@@ -403,9 +404,9 @@ public class PeerFSMImpl implements IStateMachine {
     }
   }
 
-  protected org.jdiameter.api.app.State[] getStates() {
+  protected State[] getStates() {
     if (states == null) {
-      states = new org.jdiameter.api.app.State[] { // todo merge and redesign with server fsm
+      states = new State[] { // todo merge and redesign with server fsm
           new MyState() // OKEY
           {
             public void entryAction() {

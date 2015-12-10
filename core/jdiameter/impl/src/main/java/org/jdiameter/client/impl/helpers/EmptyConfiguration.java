@@ -130,49 +130,49 @@ public class EmptyConfiguration implements AppConfiguration {
   }
 
   /**
-   * @see org.jdiameter.api.Configuration class
+   * @see Configuration class
    */
   public byte getByteValue(int i, byte b) {
     return (Byte) (isAttributeExist(i) ? elements.get(i) : b);
   }
 
   /**
-   * @see org.jdiameter.api.Configuration class
+   * @see Configuration class
    */
   public int getIntValue(int i, int i1) {
     return (Integer) (isAttributeExist(i) ? elements.get(i) : i1);
   }
 
   /**
-   * @see org.jdiameter.api.Configuration class
+   * @see Configuration class
    */
   public long getLongValue(int i, long l) {
     return (Long) (isAttributeExist(i) ? elements.get(i) : l);
   }
 
   /**
-   * @see org.jdiameter.api.Configuration class
+   * @see Configuration class
    */
   public double getDoubleValue(int i, double v) {
     return (Double) (isAttributeExist(i) ? elements.get(i) : v);
   }
 
   /**
-   * @see org.jdiameter.api.Configuration class
+   * @see Configuration class
    */
   public byte[] getByteArrayValue(int i, byte[] bytes) {
     return (byte[]) (isAttributeExist(i) ? elements.get(i) : bytes);
   }
 
   /**
-   * @see org.jdiameter.api.Configuration class
+   * @see Configuration class
    */
   public boolean getBooleanValue(int i, boolean b) {
     return (Boolean) (isAttributeExist(i) ? elements.get(i) : b);
   }
 
   /**
-   * @see org.jdiameter.api.Configuration class
+   * @see Configuration class
    */
   public String getStringValue(int i, String defValue) {
     String result = (String) elements.get(i);
@@ -180,14 +180,14 @@ public class EmptyConfiguration implements AppConfiguration {
   }
 
   /**
-   * @see org.jdiameter.api.Configuration class
+   * @see Configuration class
    */
   public boolean isAttributeExist(int i) {
     return elements.containsKey(i);
   }
 
   /**
-   * @see org.jdiameter.api.Configuration class
+   * @see Configuration class
    */
   public Configuration[] getChildren(int i) {
     return (Configuration[]) elements.get(i);

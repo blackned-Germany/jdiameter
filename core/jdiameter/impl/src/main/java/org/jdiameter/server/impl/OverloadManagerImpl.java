@@ -55,13 +55,13 @@ public class OverloadManagerImpl implements IOverloadManager {
             for (Configuration i : cAppId) {
                 if ( i.getLongValue(AuthApplId.ordinal(), 0) != 0 )
                     appId = org.jdiameter.api.ApplicationId.createByAuthAppId(
-                        i.getLongValue(VendorId.ordinal(), 0),
-                        i.getLongValue(AuthApplId.ordinal(), 0)
+                            i.getLongValue(VendorId.ordinal(), 0),
+                            i.getLongValue(AuthApplId.ordinal(), 0)
                     );
                 else
                     appId = org.jdiameter.api.ApplicationId.createByAccAppId(
-                        i.getLongValue(VendorId.ordinal(), 0),
-                        i.getLongValue(AcctApplId.ordinal(), 0)
+                            i.getLongValue(VendorId.ordinal(), 0),
+                            i.getLongValue(AcctApplId.ordinal(), 0)
                     );
                 break;
             }

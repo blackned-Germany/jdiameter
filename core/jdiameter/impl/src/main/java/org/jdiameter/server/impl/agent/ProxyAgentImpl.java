@@ -66,8 +66,8 @@ public class ProxyAgentImpl extends AgentImpl implements IProxy {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * org.jdiameter.api.EventListener#receivedSuccessMessage(org.jdiameter.
-	 * api.Message, org.jdiameter.api.Message)
+	 * EventListener#receivedSuccessMessage(org.jdiameter.
+	 * Message, Message)
 	 */
 	public void receivedSuccessMessage(Request request, Answer answer) {
 		logger.info("proxy agent: receivedSuccessMessage");
@@ -77,7 +77,7 @@ public class ProxyAgentImpl extends AgentImpl implements IProxy {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * org.jdiameter.api.EventListener#timeoutExpired(org.jdiameter.api.Message)
+	 * EventListener#timeoutExpired(Message)
 	 */
 	public void timeoutExpired(Request request) {
 		logger.info("proxy agent: timeoutExpired");

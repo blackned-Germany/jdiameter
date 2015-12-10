@@ -52,9 +52,6 @@ import org.jdiameter.api.s6a.events.JResetRequest;
 import org.jdiameter.api.s6a.events.JUpdateLocationAnswer;
 import org.jdiameter.api.s6a.events.JUpdateLocationRequest;
 import org.jdiameter.client.api.ISessionFactory;
-import org.jdiameter.client.impl.app.s6a.S6aClientSessionImpl;
-import org.jdiameter.client.impl.app.s6a.Event;
-import org.jdiameter.client.impl.app.s6a.IClientS6aSessionData;
 import org.jdiameter.client.impl.app.s6a.Event.Type;
 import org.jdiameter.common.api.app.s6a.S6aSessionState;
 import org.jdiameter.common.api.app.s6a.IS6aMessageFactory;
@@ -96,7 +93,7 @@ public class S6aClientSessionImpl extends S6aSession implements ClientS6aSession
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.app.StateMachine#getState(java.lang.Class)
+   * @see StateMachine#getState(java.lang.Class)
    */
   @SuppressWarnings("unchecked")
   public <E> E getState(Class<E> stateType) {
@@ -105,7 +102,7 @@ public class S6aClientSessionImpl extends S6aSession implements ClientS6aSession
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.NetworkReqListener#processRequest(org.jdiameter.api.Request)
+   * @see NetworkReqListener#processRequest(Request)
    */
   public Answer processRequest(Request request) {
     RequestDelivery rd  = new RequestDelivery();
@@ -149,7 +146,7 @@ public class S6aClientSessionImpl extends S6aSession implements ClientS6aSession
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.EventListener#receivedSuccessMessage(org.jdiameter.api.Message, org.jdiameter.api.Message)
+   * @see EventListener#receivedSuccessMessage(Message, Message)
    */
   public void receivedSuccessMessage(Request request, Answer answer) {
     AnswerDelivery rd = new AnswerDelivery();
@@ -163,7 +160,7 @@ public class S6aClientSessionImpl extends S6aSession implements ClientS6aSession
    * (non-Javadoc)
    * 
    * @see
-   * org.jdiameter.api.EventListener#timeoutExpired(org.jdiameter.api.Message)
+   * EventListener#timeoutExpired(Message)
    */
   public void timeoutExpired(Request request) {
     try {

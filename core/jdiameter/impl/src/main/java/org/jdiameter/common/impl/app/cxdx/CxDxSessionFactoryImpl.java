@@ -219,7 +219,7 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
    * 
    * @see
    * org.jdiameter.common.api.app.IAppSessionFactory#getNewSession(java.lang
-   * .String, java.lang.Class, org.jdiameter.api.ApplicationId,
+   * .String, java.lang.Class, ApplicationId,
    * java.lang.Object[])
    */
   public AppSession getNewSession(String sessionId, Class<? extends AppSession> aClass, ApplicationId applicationId, Object[] args) {
@@ -275,7 +275,7 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createLocationInfoAnswer(org.jdiameter.api.Answer)
+   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createLocationInfoAnswer(Answer)
    */
   public JLocationInfoAnswer createLocationInfoAnswer(Answer answer) {
     return new JLocationInfoAnswerImpl(answer);
@@ -284,7 +284,7 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createLocationInfoRequest(org.jdiameter.api.Request)
+   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createLocationInfoRequest(Request)
    */
   public JLocationInfoRequest createLocationInfoRequest(Request request) {
     return new JLocationInfoRequestImpl(request);
@@ -293,7 +293,7 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createMultimediaAuthAnswer(org.jdiameter.api.Answer)
+   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createMultimediaAuthAnswer(Answer)
    */
   public JMultimediaAuthAnswer createMultimediaAuthAnswer(Answer answer) {
     return new JMultimediaAuthAnswerImpl(answer);
@@ -302,7 +302,7 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createMultimediaAuthRequest(org.jdiameter.api.Request)
+   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createMultimediaAuthRequest(Request)
    */
   public JMultimediaAuthRequest createMultimediaAuthRequest(Request request) {
     return new JMultimediaAuthRequestImpl(request);
@@ -311,7 +311,7 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createPushProfileAnswer(org.jdiameter.api.Answer)
+   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createPushProfileAnswer(Answer)
    */
   public JPushProfileAnswer createPushProfileAnswer(Answer answer) {
     return new JPushProfileAnswerImpl(answer);
@@ -320,7 +320,7 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @seeorg.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createPushProfileRequest(org.jdiameter.api.Request)
+   * @seeorg.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createPushProfileRequest(Request)
    */
   public JPushProfileRequest createPushProfileRequest(Request request) {
     return new JPushProfileRequestImpl(request);
@@ -329,7 +329,7 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createRegistrationTerminationAnswer(org.jdiameter.api.Answer)
+   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createRegistrationTerminationAnswer(Answer)
    */
   public JRegistrationTerminationAnswer createRegistrationTerminationAnswer(Answer answer) {
     return new JRegistrationTerminationAnswerImpl(answer);
@@ -338,7 +338,7 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createRegistrationTerminationRequest(org.jdiameter.api.Request)
+   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createRegistrationTerminationRequest(Request)
    */
   public JRegistrationTerminationRequest createRegistrationTerminationRequest(Request request) {
     return new JRegistrationTerminationRequestImpl(request);
@@ -347,7 +347,7 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createServerAssignmentAnswer(org.jdiameter.api.Answer)
+   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createServerAssignmentAnswer(Answer)
    */
   public JServerAssignmentAnswer createServerAssignmentAnswer(Answer answer) {
     return new JServerAssignmentAnswerImpl(answer);
@@ -356,7 +356,7 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createServerAssignmentRequest(org.jdiameter.api.Request)
+   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createServerAssignmentRequest(Request)
    */
   public JServerAssignmentRequest createServerAssignmentRequest(Request request) {
     return new JServerAssignmentRequestImpl(request);
@@ -365,7 +365,7 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createUserAuthorizationAnswer(org.jdiameter.api.Answer)
+   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createUserAuthorizationAnswer(Answer)
    */
   public JUserAuthorizationAnswer createUserAuthorizationAnswer(Answer answer) {
     return new JUserAuthorizationAnswerImpl(answer);
@@ -374,7 +374,7 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createUserAuthorizationRequest(org.jdiameter.api.Request)
+   * @see org.jdiameter.common.api.app.cxdx.ICxDxMessageFactory#createUserAuthorizationRequest(Request)
    */
   public JUserAuthorizationRequest createUserAuthorizationRequest(Request request) {
     return new JUserAuthorizationRequestImpl(request);
@@ -394,8 +394,8 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.cxdx.ServerCxDxSessionListener#doLocationInformationRequest(
-   *   org.jdiameter.api.cxdx.ServerCxDxSession, org.jdiameter.api.cxdx.events.JLocationInfoRequest)
+   * @see ServerCxDxSessionListener#doLocationInformationRequest(
+   *   ServerCxDxSession, JLocationInfoRequest)
    */
   public void doLocationInformationRequest(ServerCxDxSession appSession, JLocationInfoRequest request)
   throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -405,8 +405,8 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.cxdx.ServerCxDxSessionListener#doMultimediaAuthRequest(
-   *   org.jdiameter.api.cxdx.ServerCxDxSession, org.jdiameter.api.cxdx.events.JMultimediaAuthRequest)
+   * @see ServerCxDxSessionListener#doMultimediaAuthRequest(
+   *   ServerCxDxSession, JMultimediaAuthRequest)
    */
   public void doMultimediaAuthRequest(ServerCxDxSession appSession, JMultimediaAuthRequest request)
   throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -416,8 +416,8 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.cxdx.ServerCxDxSessionListener#doOtherEvent(org.jdiameter.api.app.AppSession, 
-   *   org.jdiameter.api.app.AppRequestEvent, org.jdiameter.api.app.AppAnswerEvent)
+   * @see ServerCxDxSessionListener#doOtherEvent(AppSession,
+   *   AppRequestEvent, AppAnswerEvent)
    */
   public void doOtherEvent(AppSession appSession, AppRequestEvent request, AppAnswerEvent answer) 
   throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -427,8 +427,8 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.cxdx.ServerCxDxSessionListener#doPushProfileAnswer(org.jdiameter.api.cxdx.ServerCxDxSession,
-   *   org.jdiameter.api.cxdx.events.JPushProfileRequest, org.jdiameter.api.cxdx.events.JPushProfileAnswer)
+   * @see ServerCxDxSessionListener#doPushProfileAnswer(ServerCxDxSession,
+   *   JPushProfileRequest, JPushProfileAnswer)
    */
   public void doPushProfileAnswer(ServerCxDxSession appSession, JPushProfileRequest request, JPushProfileAnswer answer)
   throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -438,8 +438,8 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.cxdx.ServerCxDxSessionListener#doRegistrationTerminationAnswer(org.jdiameter.api.cxdx.ServerCxDxSession,
-   *   org.jdiameter.api.cxdx.events.JRegistrationTerminationRequest, org.jdiameter.api.cxdx.events.JRegistrationTerminationAnswer)
+   * @see ServerCxDxSessionListener#doRegistrationTerminationAnswer(ServerCxDxSession,
+   *   JRegistrationTerminationRequest, JRegistrationTerminationAnswer)
    */
   public void doRegistrationTerminationAnswer(ServerCxDxSession appSession, JRegistrationTerminationRequest request,
       JRegistrationTerminationAnswer answer) throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -450,8 +450,8 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
    * (non-Javadoc)
    * 
    * @see
-   * org.jdiameter.api.cxdx.ServerCxDxSessionListener#doServerAssignmentRequest(
-   *   org.jdiameter.api.cxdx.ServerCxDxSession, org.jdiameter.api.cxdx.events.JServerAssignmentRequest)
+   * ServerCxDxSessionListener#doServerAssignmentRequest(
+   *   ServerCxDxSession, JServerAssignmentRequest)
    */
   public void doServerAssignmentRequest(ServerCxDxSession appSession, JServerAssignmentRequest request)
   throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -461,8 +461,8 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.cxdx.ServerCxDxSessionListener#doUserAuthorizationRequest(
-   *   org.jdiameter.api.cxdx.ServerCxDxSession, org.jdiameter.api.cxdx.events.JUserAuthorizationRequest)
+   * @see ServerCxDxSessionListener#doUserAuthorizationRequest(
+   *   ServerCxDxSession, JUserAuthorizationRequest)
    */
   public void doUserAuthorizationRequest(ServerCxDxSession appSession, JUserAuthorizationRequest request)
   throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -472,8 +472,8 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.cxdx.ClientCxDxSessionListener#doLocationInformationAnswer(org.jdiameter.api.cxdx.ClientCxDxSession,
-   *   org.jdiameter.api.cxdx.events.JLocationInfoRequest, org.jdiameter.api.cxdx.events.JLocationInfoAnswer)
+   * @see ClientCxDxSessionListener#doLocationInformationAnswer(ClientCxDxSession,
+   *   JLocationInfoRequest, JLocationInfoAnswer)
    */
   public void doLocationInformationAnswer(ClientCxDxSession appSession, JLocationInfoRequest request, JLocationInfoAnswer answer)
   throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -483,8 +483,8 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.cxdx.ClientCxDxSessionListener#doMultimediaAuthAnswer(org.jdiameter.api.cxdx.ClientCxDxSession,
-   *   org.jdiameter.api.cxdx.events.JMultimediaAuthRequest, org.jdiameter.api.cxdx.events.JMultimediaAuthAnswer)
+   * @see ClientCxDxSessionListener#doMultimediaAuthAnswer(ClientCxDxSession,
+   *   JMultimediaAuthRequest, JMultimediaAuthAnswer)
    */
   public void doMultimediaAuthAnswer(ClientCxDxSession appSession, JMultimediaAuthRequest request, JMultimediaAuthAnswer answer)
   throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -494,8 +494,8 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.cxdx.ClientCxDxSessionListener#doPushProfileRequest(
-   *   org.jdiameter.api.cxdx.ClientCxDxSession, org.jdiameter.api.cxdx.events.JPushProfileRequest)
+   * @see ClientCxDxSessionListener#doPushProfileRequest(
+   *   ClientCxDxSession, JPushProfileRequest)
    */
   public void doPushProfileRequest(ClientCxDxSession appSession, JPushProfileRequest request) throws InternalException, 
   IllegalDiameterStateException, RouteException, OverloadException {
@@ -505,8 +505,8 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @seeorg.jdiameter.api.cxdx.ClientCxDxSessionListener#doRegistrationTerminationRequest(
-   *   org.jdiameter.api.cxdx.ClientCxDxSession, org.jdiameter.api.cxdx.events.JRegistrationTerminationRequest)
+   * @seeorg.jdiameter.ClientCxDxSessionListener#doRegistrationTerminationRequest(
+   *   ClientCxDxSession, JRegistrationTerminationRequest)
    */
   public void doRegistrationTerminationRequest(ClientCxDxSession appSession, JRegistrationTerminationRequest request)
   throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -516,8 +516,8 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.cxdx.ClientCxDxSessionListener#doServerAssignmentAnswer(org.jdiameter.api.cxdx.ClientCxDxSession,
-   *   org.jdiameter.api.cxdx.events.JServerAssignmentRequest, org.jdiameter.api.cxdx.events.JServerAssignmentAnswer)
+   * @see ClientCxDxSessionListener#doServerAssignmentAnswer(ClientCxDxSession,
+   *   JServerAssignmentRequest, JServerAssignmentAnswer)
    */
   public void doServerAssignmentAnswer(ClientCxDxSession appSession, JServerAssignmentRequest request, JServerAssignmentAnswer answer)
   throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -527,8 +527,8 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.cxdx.ClientCxDxSessionListener#doUserAuthorizationAnswer(org.jdiameter.api.cxdx.ClientCxDxSession,
-   *   org.jdiameter.api.cxdx.events.JUserAuthorizationRequest, org.jdiameter.api.cxdx.events.JUserAuthorizationAnswer)
+   * @see ClientCxDxSessionListener#doUserAuthorizationAnswer(ClientCxDxSession,
+   *   JUserAuthorizationRequest, JUserAuthorizationAnswer)
    */
   public void doUserAuthorizationAnswer(ClientCxDxSession appSession, JUserAuthorizationRequest request, JUserAuthorizationAnswer answer)
   throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -538,7 +538,7 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.app.StateChangeListener#stateChanged(java.lang.Enum, java.lang.Enum)
+   * @see StateChangeListener#stateChanged(java.lang.Enum, java.lang.Enum)
    */
   @SuppressWarnings("unchecked")
   public void stateChanged(Enum oldState, Enum newState) {
@@ -548,7 +548,7 @@ ICxDxMessageFactory, StateChangeListener<AppSession> {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.app.StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
+   * @see StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
    */
   @SuppressWarnings("unchecked")
   public void stateChanged(AppSession source, Enum oldState, Enum newState) {

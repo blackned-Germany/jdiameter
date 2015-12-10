@@ -73,7 +73,7 @@ public class CxDxLocalSessionDataImpl extends AppSessionDataLocalImpl implements
   }
 
   /* (non-Javadoc)
-   * @see org.jdiameter.common.api.app.cxdx.ICxDxSessionData#setBuffer(org.jdiameter.api.Message)
+   * @see org.jdiameter.common.api.app.cxdx.ICxDxSessionData#setBuffer(Message)
    */
   @Override
   public void setBuffer(Request buffer) {
