@@ -22,6 +22,7 @@
 
 package org.jdiameter.client.impl.annotation;
 
+
 import org.jdiameter.api.*;
 import org.jdiameter.api.annotation.*;
 import org.jdiameter.client.impl.annotation.internal.ClassInfo;
@@ -172,7 +173,7 @@ public class Recoder implements IRecoder {
         switch (ad.type()) {
           case Integer32: 
           case Enumerated: { 
-            for (AvpFlag f : ad.must()) 
+            for (AvpFlag f : ad.must())
               if (AvpFlag.M.equals(f)) { 
                 m = true;
               } 

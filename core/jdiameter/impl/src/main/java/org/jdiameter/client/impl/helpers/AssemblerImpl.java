@@ -42,6 +42,7 @@ import org.jdiameter.client.api.IAssembler;
 import org.picocontainer.MutablePicoContainer;
 import org.picocontainer.PicoBuilder;
 
+
 /**
  * IoC for stack
  * 
@@ -53,7 +54,7 @@ public class AssemblerImpl implements IAssembler {
 
   AssemblerImpl parent;
   final AssemblerImpl[] childs = new AssemblerImpl[ExtensionPoint.COUNT];
-  final MutablePicoContainer pico = new PicoBuilder().withCaching().build();
+  final MutablePicoContainer pico; //= new PicoBuilder().withCaching().build();
 
   /**
    * Create instance of class with predefined configuration
@@ -62,6 +63,7 @@ public class AssemblerImpl implements IAssembler {
    * @throws Exception if generated internal exception
    */
   public AssemblerImpl(Configuration config) throws Exception {
+      pico =  new PicoBuilder().withCaching().build();
     Configuration[] ext = config.getChildren(Extensions.ordinal());
     for (Configuration e : ext) {
       String extName = e.getStringValue(ExtensionName.ordinal(), "");
@@ -103,7 +105,8 @@ public class AssemblerImpl implements IAssembler {
    * @throws Exception
    */
   protected AssemblerImpl(AssemblerImpl parent, Configuration e, ExtensionPoint p) throws Exception {
-    this.parent = parent;
+      pico =  new PicoBuilder().withCaching().build();
+      this.parent = parent;
     fill(p.getExtensionPoints(), e, false);
   }
 

@@ -27,6 +27,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+import org.jdiameter.api.app.StateMachine;
 import org.jdiameter.api.Answer;
 import org.jdiameter.api.ApplicationId;
 import org.jdiameter.api.NetworkReqListener;
@@ -43,7 +44,7 @@ import org.jdiameter.common.impl.app.AppSessionImpl;
  * @author <a href="mailto:brainslog@gmail.com"> Alexandre Mendonca </a>
  * @author <a href="mailto:baranowb@gmail.com"> Bartosz Baranowski </a>
  */
-public abstract class AppRfSessionImpl extends AppSessionImpl implements  NetworkReqListener, org.jdiameter.api.app.StateMachine {
+public abstract class AppRfSessionImpl extends AppSessionImpl implements  NetworkReqListener, StateMachine {
 
   protected Lock sendAndStateLock = new ReentrantLock();
   protected ApplicationId appId;

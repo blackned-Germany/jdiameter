@@ -234,7 +234,7 @@ public class AccSessionFactoryImpl implements IAccSessionFactory,IAccMessageFact
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.common.api.app.acc.IAccSessionFactory#setApplicationId( org.jdiameter.api.ApplicationId)
+   * @see org.jdiameter.common.api.app.acc.IAccSessionFactory#setApplicationId( ApplicationId)
    */
   public void setApplicationId(ApplicationId id) {
     this.applicationId = id;
@@ -342,7 +342,7 @@ public class AccSessionFactoryImpl implements IAccSessionFactory,IAccMessageFact
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.app.StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
+   * @see StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
    */
   public void stateChanged(AppSession source, Enum oldState, Enum newState) {
     logger.info("Diameter ACC SessionFactory :: stateChanged :: source[{}], oldState[{}], newState[{}]", new Object[] { source, oldState, newState });
@@ -369,7 +369,7 @@ public class AccSessionFactoryImpl implements IAccSessionFactory,IAccMessageFact
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.common.api.app.acc.IClientAccActionContext#disconnectUserOrDev (org.jdiameter.api.Request)
+   * @see org.jdiameter.common.api.app.acc.IClientAccActionContext#disconnectUserOrDev (Request)
    */
   public void disconnectUserOrDev(ClientAccSession appSession, Request sessionTermRequest) throws InternalException {
     logger.info("disconnectUserOrDev :: appSession[" + appSession + "], Request[" + sessionTermRequest + "]");
@@ -378,7 +378,7 @@ public class AccSessionFactoryImpl implements IAccSessionFactory,IAccMessageFact
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.common.api.app.acc.IClientAccActionContext#failedSendRecord (org.jdiameter.api.Request)
+   * @see org.jdiameter.common.api.app.acc.IClientAccActionContext#failedSendRecord (Request)
    */
   public boolean failedSendRecord(ClientAccSession appSession, Request accRequest) throws InternalException {
     logger.info("failedSendRecord :: appSession[" + appSession + "], Request[" + accRequest + "]");
@@ -388,7 +388,7 @@ public class AccSessionFactoryImpl implements IAccSessionFactory,IAccMessageFact
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.common.api.app.acc.IClientAccActionContext# interimIntervalElapses(org.jdiameter.api.Request)
+   * @see org.jdiameter.common.api.app.acc.IClientAccActionContext# interimIntervalElapses(Request)
    */
   public void interimIntervalElapses(ClientAccSession appSession, Request interimRequest) throws InternalException {
     logger.info("interimIntervalElapses :: appSession[" + appSession + "], Request[" + interimRequest + "]");
@@ -399,7 +399,7 @@ public class AccSessionFactoryImpl implements IAccSessionFactory,IAccMessageFact
   /*
    * (non-Javadoc)
    * 
-   * @seeorg.jdiameter.common.api.app.acc.IServerAccActionContext#sessionTimeoutElapses(org.jdiameter.api.acc.ServerAccSession)
+   * @seeorg.jdiameter.common.api.app.acc.IServerAccActionContext#sessionTimeoutElapses(ServerAccSession)
    */
   public void sessionTimeoutElapses(ServerAccSession appSession) throws InternalException {
     logger.info("sessionTimeoutElapses :: appSession[" + appSession + "]");
@@ -409,7 +409,7 @@ public class AccSessionFactoryImpl implements IAccSessionFactory,IAccMessageFact
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.common.api.app.acc.IServerAccActionContext#sessionTimerStarted(org.jdiameter.api.acc.ServerAccSession, java.util.concurrent.ScheduledFuture)
+   * @see org.jdiameter.common.api.app.acc.IServerAccActionContext#sessionTimerStarted(ServerAccSession, java.util.concurrent.ScheduledFuture)
    */
   @SuppressWarnings("unchecked")
   public void sessionTimerStarted(ServerAccSession appSession, ScheduledFuture timer) throws InternalException {
@@ -419,7 +419,7 @@ public class AccSessionFactoryImpl implements IAccSessionFactory,IAccMessageFact
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.common.api.app.acc.IServerAccActionContext#srssionTimerCanceled(org.jdiameter.api.acc.ServerAccSession, java.util.concurrent.ScheduledFuture)
+   * @see org.jdiameter.common.api.app.acc.IServerAccActionContext#srssionTimerCanceled(ServerAccSession, java.util.concurrent.ScheduledFuture)
    */
   @SuppressWarnings("unchecked")
   public void sessionTimerCanceled(ServerAccSession appSession, ScheduledFuture timer) throws InternalException {
@@ -444,7 +444,7 @@ public class AccSessionFactoryImpl implements IAccSessionFactory,IAccMessageFact
 	 * 
 	 * @see
 	 * org.jdiameter.common.api.app.acc.IAccMessageFactory#createAccRequest(
-	 * org.jdiameter.api.Request)
+	 * Request)
 	 */
 	@Override
 	public AccountRequest createAccRequest(Request request) {
@@ -456,7 +456,7 @@ public class AccSessionFactoryImpl implements IAccSessionFactory,IAccMessageFact
 	 * 
 	 * @see
 	 * org.jdiameter.common.api.app.acc.IAccMessageFactory#createAccAnswer(org
-	 * .jdiameter.api.Answer)
+	 * .jdiameter.Answer)
 	 */
 	@Override
 	public AccountAnswer createAccAnswer(Answer answer) {

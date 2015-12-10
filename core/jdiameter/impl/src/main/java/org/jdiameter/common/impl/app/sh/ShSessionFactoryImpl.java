@@ -175,7 +175,7 @@ public class ShSessionFactoryImpl implements IShSessionFactory, StateChangeListe
    * (non-Javadoc)
    * 
    * @see org.jdiameter.common.api.app.IAppSessionFactory#getNewSession(java.lang.String, java.lang.Class, 
-   *   org.jdiameter.api.ApplicationId, java.lang.Object[])
+   *   ApplicationId, java.lang.Object[])
    */
   public AppSession getNewSession(String sessionId, Class<? extends AppSession> aClass, ApplicationId applicationId, Object[] args) {
     try {
@@ -274,7 +274,7 @@ public class ShSessionFactoryImpl implements IShSessionFactory, StateChangeListe
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.app.StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
+   * @see StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
    */
   @SuppressWarnings("unchecked")
   public void stateChanged(AppSession source, Enum oldState, Enum newState) {
@@ -286,8 +286,8 @@ public class ShSessionFactoryImpl implements IShSessionFactory, StateChangeListe
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.sh.ClientShSessionListener#doOtherEvent(org.jdiameter.api.app.AppSession, 
-   *   org.jdiameter.api.app.AppRequestEvent, org.jdiameter.api.app.AppAnswerEvent)
+   * @see ClientShSessionListener#doOtherEvent(AppSession,
+   *   AppRequestEvent, AppAnswerEvent)
    */
   public void doOtherEvent(AppSession session, AppRequestEvent request, AppAnswerEvent answer) 
   throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -297,8 +297,8 @@ public class ShSessionFactoryImpl implements IShSessionFactory, StateChangeListe
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.sh.ClientShSessionListener#doProfileUpdateAnswerEvent(org.jdiameter.api.sh.ClientShSession,
-   *   org.jdiameter.api.sh.events.ProfileUpdateRequest, org.jdiameter.api.sh.events.ProfileUpdateAnswer)
+   * @see ClientShSessionListener#doProfileUpdateAnswerEvent(ClientShSession,
+   *   ProfileUpdateRequest, ProfileUpdateAnswer)
    */
   public void doProfileUpdateAnswerEvent(ClientShSession session, ProfileUpdateRequest request, ProfileUpdateAnswer answer)
   throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -308,8 +308,8 @@ public class ShSessionFactoryImpl implements IShSessionFactory, StateChangeListe
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.sh.ClientShSessionListener#doPushNotificationRequestEvent(
-   *   org.jdiameter.api.sh.ClientShSession, org.jdiameter.api.sh.events.PushNotificationRequest)
+   * @see ClientShSessionListener#doPushNotificationRequestEvent(
+   *   ClientShSession, PushNotificationRequest)
    */
   public void doPushNotificationRequestEvent(ClientShSession session, PushNotificationRequest request)
   throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -319,8 +319,8 @@ public class ShSessionFactoryImpl implements IShSessionFactory, StateChangeListe
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.sh.ClientShSessionListener#doSubscribeNotificationsAnswerEvent(org.jdiameter.api.sh.ClientShSession,
-   *   org.jdiameter.api.sh.events.SubscribeNotificationsRequest, org.jdiameter.api.sh.events.SubscribeNotificationsAnswer)
+   * @see ClientShSessionListener#doSubscribeNotificationsAnswerEvent(ClientShSession,
+   *   SubscribeNotificationsRequest, SubscribeNotificationsAnswer)
    */
   public void doSubscribeNotificationsAnswerEvent(ClientShSession session, SubscribeNotificationsRequest request, 
       SubscribeNotificationsAnswer answer) throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -331,10 +331,10 @@ public class ShSessionFactoryImpl implements IShSessionFactory, StateChangeListe
    * (non-Javadoc)
    * 
    * @see
-   * org.jdiameter.api.sh.ClientShSessionListener#doUserDataAnswerEvent(org
-   * .jdiameter.api.sh.ClientShSession,
-   * org.jdiameter.api.sh.events.UserDataRequest,
-   * org.jdiameter.api.sh.events.UserDataAnswer)
+   * ClientShSessionListener#doUserDataAnswerEvent(org
+   * .jdiameter.ClientShSession,
+   * UserDataRequest,
+   * UserDataAnswer)
    */
   public void doUserDataAnswerEvent(ClientShSession session, UserDataRequest request, UserDataAnswer answer)
   throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -345,9 +345,9 @@ public class ShSessionFactoryImpl implements IShSessionFactory, StateChangeListe
    * (non-Javadoc)
    * 
    * @see
-   * org.jdiameter.api.sh.ServerShSessionListener#doProfileUpdateRequestEvent
-   * (org.jdiameter.api.sh.ServerShSession,
-   * org.jdiameter.api.sh.events.ProfileUpdateRequest)
+   * ServerShSessionListener#doProfileUpdateRequestEvent
+   * (ServerShSession,
+   * ProfileUpdateRequest)
    */
   public void doProfileUpdateRequestEvent(ServerShSession session, ProfileUpdateRequest request)
   throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -358,10 +358,10 @@ public class ShSessionFactoryImpl implements IShSessionFactory, StateChangeListe
    * (non-Javadoc)
    * 
    * @see
-   * org.jdiameter.api.sh.ServerShSessionListener#doPushNotificationAnswerEvent
-   * (org.jdiameter.api.sh.ServerShSession,
-   * org.jdiameter.api.sh.events.PushNotificationRequest,
-   * org.jdiameter.api.sh.events.PushNotificationAnswer)
+   * ServerShSessionListener#doPushNotificationAnswerEvent
+   * (ServerShSession,
+   * PushNotificationRequest,
+   * PushNotificationAnswer)
    */
   public void doPushNotificationAnswerEvent(ServerShSession session, PushNotificationRequest request, PushNotificationAnswer answer)
   throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -371,10 +371,10 @@ public class ShSessionFactoryImpl implements IShSessionFactory, StateChangeListe
   /*
    * (non-Javadoc)
    * 
-   * @seeorg.jdiameter.api.sh.ServerShSessionListener#
+   * @seeorg.jdiameter.ServerShSessionListener#
    * doSubscribeNotificationsRequestEvent
-   * (org.jdiameter.api.sh.ServerShSession,
-   * org.jdiameter.api.sh.events.SubscribeNotificationsRequest)
+   * (ServerShSession,
+   * SubscribeNotificationsRequest)
    */
   public void doSubscribeNotificationsRequestEvent(ServerShSession session, SubscribeNotificationsRequest request)
   throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
@@ -385,9 +385,9 @@ public class ShSessionFactoryImpl implements IShSessionFactory, StateChangeListe
    * (non-Javadoc)
    * 
    * @see
-   * org.jdiameter.api.sh.ServerShSessionListener#doUserDataRequestEvent(org
-   * .jdiameter.api.sh.ServerShSession,
-   * org.jdiameter.api.sh.events.UserDataRequest)
+   * ServerShSessionListener#doUserDataRequestEvent(org
+   * .jdiameter.ServerShSession,
+   * UserDataRequest)
    */
   public void doUserDataRequestEvent(ServerShSession session, UserDataRequest request)
   throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {

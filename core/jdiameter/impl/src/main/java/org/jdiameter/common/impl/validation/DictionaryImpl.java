@@ -62,7 +62,7 @@ public class DictionaryImpl implements Dictionary {
 
   private static transient Logger logger = LoggerFactory.getLogger(DictionaryImpl.class);
 
-  public static final Dictionary INSTANCE = new DictionaryImpl("dictionary.xml");
+  public static final Dictionary INSTANCE = new DictionaryImpl("/dictionary.xml");
 
   private static final String UNDEFINED_AVP_TYPE = "UNDEFINED";
 
@@ -97,12 +97,12 @@ public class DictionaryImpl implements Dictionary {
       is = DictionarySingleton.class.getResourceAsStream(confFile);
       if(is == null) {
         logger.debug("Failed to locate dictionary configuration file: {}, in class classloader. Trying thread context class loader.", confFile);         
-        is = Thread.currentThread().getContextClassLoader().getResourceAsStream(confFile);  
+        is = Thread.currentThread().getContextClassLoader().getResourceAsStream(confFile);
       }
 
       if(is == null) {
         logger.debug("Failed to locate dictionary configuration file: {}, in thread context class loader. Trying using 'config/' prefix.", confFile);         
-        is = Thread.currentThread().getContextClassLoader().getResourceAsStream("config/" + confFile);  
+        is = Thread.currentThread().getContextClassLoader().getResourceAsStream("config/" + confFile);
       }
 
       if(is == null) {
@@ -148,7 +148,7 @@ public class DictionaryImpl implements Dictionary {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.validation.Dictionary#configure(java.io.InputStream)
+   * @see Dictionary#configure(java.io.InputStream)
    */
   public void configure(InputStream is) {
     if (is == null) {
@@ -613,7 +613,7 @@ public class DictionaryImpl implements Dictionary {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.validation.Dictionary#isConfigured()
+   * @see Dictionary#isConfigured()
    */
   public boolean isConfigured() {
     return this.configured;
@@ -661,7 +661,7 @@ public class DictionaryImpl implements Dictionary {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.validation.Dictionary#getMessage(int, boolean)
+   * @see Dictionary#getMessage(int, boolean)
    */
   public MessageRepresentation getMessage(int commandCode, boolean isRequest) {
     return this.getMessage(commandCode, 0, isRequest);
@@ -670,7 +670,7 @@ public class DictionaryImpl implements Dictionary {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.validation.Dictionary#getMessage(int, long, boolean)
+   * @see Dictionary#getMessage(int, long, boolean)
    */
   public MessageRepresentation getMessage(int commandCode, long applicationId, boolean isRequest) {
     if (!this.configured) {
@@ -689,7 +689,7 @@ public class DictionaryImpl implements Dictionary {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.validation.Dictionary#isValidate()
+   * @see Dictionary#isValidate()
    */
   public boolean isEnabled() {
     return this.enabled;
@@ -698,7 +698,7 @@ public class DictionaryImpl implements Dictionary {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.validation.Dictionary#getSendLevel()
+   * @see Dictionary#getSendLevel()
    */
   public ValidatorLevel getSendLevel() {
     return this.sendValidationLevel;
@@ -707,7 +707,7 @@ public class DictionaryImpl implements Dictionary {
   /*
    * (non-Javadoc)
    * 
-   * @see org.jdiameter.api.validation.Dictionary#getReceiveLevel()
+   * @see Dictionary#getReceiveLevel()
    */
   public ValidatorLevel getReceiveLevel() {
     return this.receiveValidationLevel;

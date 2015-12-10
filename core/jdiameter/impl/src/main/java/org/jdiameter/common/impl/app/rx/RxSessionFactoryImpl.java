@@ -35,21 +35,21 @@ import org.jdiameter.api.app.AppRequestEvent;
 import org.jdiameter.api.app.AppSession;
 import org.jdiameter.api.app.StateChangeListener;
 
-//import org.jdiameter.api.auth.events.ReAuthAnswer;
-//import org.jdiameter.api.auth.events.ReAuthRequest;
+//import ReAuthAnswer;
+//import ReAuthRequest;
 import org.jdiameter.api.rx.events.RxReAuthAnswer;
 import org.jdiameter.api.rx.events.RxReAuthRequest;
 
 
-//import org.jdiameter.api.auth.events.AbortSessionAnswer;
-//import org.jdiameter.api.auth.events.AbortSessionRequest;
+//import AbortSessionAnswer;
+//import AbortSessionRequest;
 import org.jdiameter.api.rx.events.RxAbortSessionAnswer;
 import org.jdiameter.api.rx.events.RxAbortSessionRequest;
 
 
 
-//import org.jdiameter.api.auth.events.SessionTermAnswer;
-//import org.jdiameter.api.auth.events.SessionTermRequest;
+//import SessionTermAnswer;
+//import SessionTermRequest;
 import org.jdiameter.api.rx.events.RxSessionTermAnswer;
 import org.jdiameter.api.rx.events.RxSessionTermRequest;
 
@@ -400,7 +400,7 @@ IRxMessageFactory, IServerRxSessionContext, IClientRxSessionContext {
   /*
    * (non-Javadoc)
    *
-   * @see org.jdiameter.api.app.StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
+   * @see StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
    */
   public void stateChanged(AppSession source, Enum oldState, Enum newState) {
     logger.info("Diameter Rx SessionFactory :: stateChanged :: source[{}], oldState[{}], newState[{}]", new Object[]{source, oldState, newState});

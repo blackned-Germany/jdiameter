@@ -113,7 +113,7 @@ public class RealmTableImpl implements IRealmTable {
 
   /* 
    * (non-Javadoc)
-   * @see org.jdiameter.client.api.controller.IRealmTable#getRealm(java.lang.String, org.jdiameter.api.ApplicationId)
+   * @see org.jdiameter.client.api.controller.IRealmTable#getRealm(java.lang.String, ApplicationId)
    */
   public Realm getRealm(String realmName, ApplicationId applicationId) {
     RealmSet rs = this.realmNameToRealmSet.get(realmName);
@@ -122,7 +122,7 @@ public class RealmTableImpl implements IRealmTable {
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.client.api.controller.IRealmTable#removeRealmApplicationId(java.lang.String, org.jdiameter.api.ApplicationId)
+   * @see org.jdiameter.client.api.controller.IRealmTable#removeRealmApplicationId(java.lang.String, ApplicationId)
    */
   public Realm removeRealmApplicationId(String realmName, ApplicationId appId) {
     RealmSet set = this.realmNameToRealmSet.get(realmName);
@@ -380,7 +380,7 @@ public class RealmTableImpl implements IRealmTable {
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.RealmTable#getStatistic(java.lang.String)
+   * @see RealmTable#getStatistic(java.lang.String)
    */
   @Override
   public Statistic getStatistic(String realmName) {
@@ -390,7 +390,7 @@ public class RealmTableImpl implements IRealmTable {
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.Wrapper#isWrapperFor(java.lang.Class)
+   * @see Wrapper#isWrapperFor(java.lang.Class)
    */
   @Override
   public boolean isWrapperFor(Class<?> iface) throws InternalException {
@@ -399,7 +399,7 @@ public class RealmTableImpl implements IRealmTable {
 
   /*
    * (non-Javadoc)
-   * @see org.jdiameter.api.Wrapper#unwrap(java.lang.Class)
+   * @see Wrapper#unwrap(java.lang.Class)
    */
   @Override
   public <T> T unwrap(Class<T> iface) throws InternalException {

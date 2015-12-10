@@ -22,6 +22,7 @@
 
 package org.jdiameter.server.impl.helpers;
 
+import org.jdiameter.api.Configuration;
 import org.jdiameter.api.ConfigurationListener;
 import org.jdiameter.api.MutableConfiguration;
 import org.jdiameter.client.impl.helpers.ExtensionPoint;
@@ -203,7 +204,7 @@ public class EmptyConfiguration extends org.jdiameter.client.impl.helpers.EmptyC
     }
   }
 
-  public void setChildren(int key, org.jdiameter.api.Configuration... values) {
+  public void setChildren(int key, Configuration... values) {
     List<ConfigurationListener> list = listeners.get(key);
     if (list != null)  {
       boolean commit = true;
@@ -239,7 +240,7 @@ public class EmptyConfiguration extends org.jdiameter.client.impl.helpers.EmptyC
   }
 
   /**
-   * @see org.jdiameter.api.MutableConfiguration class
+   * @see MutableConfiguration class
    */
   public void addChangeListener(ConfigurationListener listener, int... ints) {
     for (int i:ints) {
@@ -253,7 +254,7 @@ public class EmptyConfiguration extends org.jdiameter.client.impl.helpers.EmptyC
   }
 
   /**
-   * @see org.jdiameter.api.MutableConfiguration class
+   * @see MutableConfiguration class
    */
   public void removeChangeListener(ConfigurationListener listener,int... ints) {
     for (int i:ints) {

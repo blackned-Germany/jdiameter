@@ -324,63 +324,63 @@ ClientAuthSessionListener, IClientAuthActionContext, IServerAuthActionContext, S
   // Message Handlers -------------------------------------------------------
 
   /* (non-Javadoc)
-   * @see org.jdiameter.api.auth.ClientAuthSessionListener#doAbortSessionRequestEvent(org.jdiameter.api.auth.ClientAuthSession, org.jdiameter.api.auth.events.AbortSessionRequest)
+   * @see ClientAuthSessionListener#doAbortSessionRequestEvent(ClientAuthSession, AbortSessionRequest)
    */
   public void doAbortSessionRequestEvent(ClientAuthSession appSession, AbortSessionRequest asr) throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
     logger.info("Diameter Gq AuthorizationSessionFactory :: doAbortSessionRequestEvent :: appSession[{}], ASR[{}]", appSession, asr);
   }
 
   /* (non-Javadoc)
-   * @see org.jdiameter.api.auth.ServerAuthSessionListener#doAbortSessionAnswerEvent(org.jdiameter.api.auth.ServerAuthSession, org.jdiameter.api.auth.events.AbortSessionAnswer)
+   * @see ServerAuthSessionListener#doAbortSessionAnswerEvent(ServerAuthSession, AbortSessionAnswer)
    */
   public void doAbortSessionAnswerEvent(ServerAuthSession appSession, AbortSessionAnswer asa) throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
     logger.info("Diameter Gq AuthorizationSessionFactory :: doAbortSessionAnswerEvent :: appSession[{}], ASA[{}]", appSession, asa);
   }
 
   /* (non-Javadoc)
-   * @see org.jdiameter.api.auth.ServerAuthSessionListener#doSessionTerminationRequestEvent(org.jdiameter.api.auth.ServerAuthSession, org.jdiameter.api.auth.events.SessionTermRequest)
+   * @see ServerAuthSessionListener#doSessionTerminationRequestEvent(ServerAuthSession, SessionTermRequest)
    */
   public void doSessionTerminationRequestEvent(ServerAuthSession appSession, SessionTermRequest str) throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
     logger.info("Diameter Gq AuthorizationSessionFactory :: doSessionTerminationRequestEvent :: appSession[{}], STR[{}]", appSession, str);
   }
 
   /* (non-Javadoc)
-   * @see org.jdiameter.api.auth.ClientAuthSessionListener#doSessionTerminationAnswerEvent(org.jdiameter.api.auth.ClientAuthSession, org.jdiameter.api.auth.events.SessionTermAnswer)
+   * @see ClientAuthSessionListener#doSessionTerminationAnswerEvent(ClientAuthSession, SessionTermAnswer)
    */
   public void doSessionTerminationAnswerEvent(ClientAuthSession appSession, SessionTermAnswer sta) throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
     logger.info("Diameter Gq AuthorizationSessionFactory :: doSessionTerminationAnswerEvent :: appSession[{}], STA[{}]", appSession, sta);
   }
 
   /* (non-Javadoc)
-   * @see org.jdiameter.api.auth.ServerAuthSessionListener#doAuthRequestEvent(org.jdiameter.api.auth.ServerAuthSession, org.jdiameter.api.app.AppRequestEvent)
+   * @see ServerAuthSessionListener#doAuthRequestEvent(ServerAuthSession, AppRequestEvent)
    */
   public void doAuthRequestEvent(ServerAuthSession appSession, AppRequestEvent request) throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
     logger.info("Diameter Gq AuthorizationSessionFactory :: doAuthRequestEvent :: appSession[{}], Request[{}]", appSession, request);
   }
 
   /* (non-Javadoc)
-   * @see org.jdiameter.api.auth.ClientAuthSessionListener#doAuthAnswerEvent(org.jdiameter.api.auth.ClientAuthSession, org.jdiameter.api.app.AppRequestEvent, org.jdiameter.api.app.AppAnswerEvent)
+   * @see ClientAuthSessionListener#doAuthAnswerEvent(ClientAuthSession, AppRequestEvent, AppAnswerEvent)
    */
   public void doAuthAnswerEvent(ClientAuthSession appSession, AppRequestEvent request, AppAnswerEvent answer) throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
     logger.info("Diameter Gq AuthorizationSessionFactory :: doAuthAnswerEvent :: appSession[{}], Request[{}], Answer[{}]", new Object[]{appSession, request, answer});
   }
 
   /* (non-Javadoc)
-   * @see org.jdiameter.api.auth.ClientAuthSessionListener#doReAuthRequestEvent(org.jdiameter.api.auth.ClientAuthSession, org.jdiameter.api.auth.events.ReAuthRequest)
+   * @see ClientAuthSessionListener#doReAuthRequestEvent(ClientAuthSession, ReAuthRequest)
    */
   public void doReAuthRequestEvent(ClientAuthSession appSession, ReAuthRequest rar) throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
     logger.info("Diameter Gq AuthorizationSessionFactory :: doReAuthRequestEvent :: appSession[{}], RAR[{}]", appSession, rar);
   }
 
   /* (non-Javadoc)
-   * @see org.jdiameter.api.auth.ServerAuthSessionListener#doReAuthAnswerEvent(org.jdiameter.api.auth.ServerAuthSession, org.jdiameter.api.auth.events.ReAuthRequest, org.jdiameter.api.auth.events.ReAuthAnswer)
+   * @see ServerAuthSessionListener#doReAuthAnswerEvent(ServerAuthSession, ReAuthRequest, ReAuthAnswer)
    */
   public void doReAuthAnswerEvent(ServerAuthSession appSession, ReAuthRequest rar, ReAuthAnswer raa) throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
     logger.info("Diameter Gq AuthorizationSessionFactory :: doReAuthAnswerEvent :: appSession[{}], RAR[{}], RAA[{}]", new Object[]{appSession, rar, raa});
   }
 
   /* (non-Javadoc)
-   * @see org.jdiameter.api.auth.ServerAuthSessionListener#doOtherEvent(org.jdiameter.api.app.AppSession, org.jdiameter.api.app.AppRequestEvent, org.jdiameter.api.app.AppAnswerEvent)
+   * @see ServerAuthSessionListener#doOtherEvent(AppSession, AppRequestEvent, AppAnswerEvent)
    */
   public void doOtherEvent(AppSession appSession, AppRequestEvent request, AppAnswerEvent answer) throws InternalException, IllegalDiameterStateException, RouteException, OverloadException {
     logger.info("Diameter Gq AuthorizationSessionFactory :: doOtherEvent :: appSession[{}], Request[{}], Answer[{}]", new Object[]{appSession, request, answer});
@@ -389,14 +389,14 @@ ClientAuthSessionListener, IClientAuthActionContext, IServerAuthActionContext, S
   // State Change Listener --------------------------------------------------
 
   /* (non-Javadoc)
-   * @see org.jdiameter.api.app.StateChangeListener#stateChanged(java.lang.Enum, java.lang.Enum)
+   * @see StateChangeListener#stateChanged(java.lang.Enum, java.lang.Enum)
    */
   public void stateChanged(Enum oldState, Enum newState) {
     logger.info("Diameter Gq AuthorizationSessionFactory  :: stateChanged :: oldState[{}], newState[{}]", oldState, newState);
   }
 
   /* (non-Javadoc)
-   * @see org.jdiameter.api.app.StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
+   * @see StateChangeListener#stateChanged(java.lang.Object, java.lang.Enum, java.lang.Enum)
    */
   public void stateChanged(AppSession source, Enum oldState, Enum newState) {
     logger.info("Diameter Gq AuthorizationSessionFactory :: stateChanged :: source[{}], oldState[{}], newState[{}]", new Object[] {source, oldState, newState});
@@ -405,7 +405,7 @@ ClientAuthSessionListener, IClientAuthActionContext, IServerAuthActionContext, S
   // Context Methods --------------------------------------------------------
 
   /* (non-Javadoc)
-   * @see org.jdiameter.common.api.app.auth.IClientAuthActionContext#accessTimeoutElapses(org.jdiameter.api.auth.ClientAuthSession)
+   * @see org.jdiameter.common.api.app.auth.IClientAuthActionContext#accessTimeoutElapses(ClientAuthSession)
    */
   public void accessTimeoutElapses(ClientAuthSession session) throws InternalException {
     // TODO Auto-generated method stub
@@ -419,14 +419,14 @@ ClientAuthSessionListener, IClientAuthActionContext, IServerAuthActionContext, S
   }
 
   /* (non-Javadoc)
-   * @see org.jdiameter.common.api.app.auth.IClientAuthActionContext#disconnectUserOrDev(org.jdiameter.api.auth.ClientAuthSession, org.jdiameter.api.Message)
+   * @see org.jdiameter.common.api.app.auth.IClientAuthActionContext#disconnectUserOrDev(ClientAuthSession, Message)
    */
   public void disconnectUserOrDev(ClientAuthSession session, Message request) throws InternalException {
     // TODO Auto-generated method stub
   }
 
   /* (non-Javadoc)
-   * @see org.jdiameter.common.api.app.auth.IServerAuthActionContext#accessTimeoutElapses(org.jdiameter.api.auth.ServerAuthSession)
+   * @see org.jdiameter.common.api.app.auth.IServerAuthActionContext#accessTimeoutElapses(ServerAuthSession)
    */
   public void accessTimeoutElapses(ServerAuthSession session) throws InternalException {
     // TODO Auto-generated method stub
