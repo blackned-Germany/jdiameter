@@ -5,18 +5,17 @@
 	<parent>
 		<groupId>org.mobicents.diameter</groupId>
 		<artifactId>diameter-core-parent</artifactId>
-		<version>1.6.3</version>
+		<version>1.6.4</version>
 	</parent>
 
 	<artifactId>jdiameter-parent</artifactId>
-	<version>1.6.3</version>
+	<version>1.6.4</version>
 
 	<packaging>pom</packaging>
 
 	<name>Mobicents :: Diameter Stack :: ${pom.artifactId}</name>
 
 	<modules>
-		<module>api</module>
 		<module>impl</module>
 	</modules>
 
