@@ -5,11 +5,11 @@
 	<parent>
 		<groupId>org.mobicents.diameter</groupId>
 		<artifactId>jdiameter-parent</artifactId>
-		<version>1.6.4</version>
+		<version>1.6.5-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>jdiameter-impl</artifactId>
-	<version>1.6.4</version>
+	<version>1.6.5-SNAPSHOT</version>
 
 	<name>Mobicents :: Diameter Stack :: ${pom.artifactId}</name>
 	<packaging>bundle</packaging>
