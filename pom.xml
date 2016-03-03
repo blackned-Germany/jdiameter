@@ -4,13 +4,18 @@
 
 	<groupId>org.mobicents.diameter</groupId>
 	<artifactId>diameter-parent</artifactId>
-	<version>1.6.4</version>
+	<version>1.6.6-SNAPSHOT</version>
 
 	<packaging>pom</packaging>
 
 	<name>Mobicents :: Diameter :: ${pom.artifactId}</name>
 	<description>Mobicents Diameter</description>
 	<url>http://code.google.com/p/jdiameter/</url>
+
+	<properties>
+		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+		<maven.javadoc.failOnError>false</maven.javadoc.failOnError>
+	</properties>
 
 	<ciManagement>
 		<system>Jenkins</system>
@@ -65,9 +70,13 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-release-plugin</artifactId>
+						<version>2.5.1</version>
 						<configuration>
 							<autoVersionSubmodules>false</autoVersionSubmodules>
 							<resume>false</resume>
+							<pushChanges>false</pushChanges>
+							<localCheckout>true</localCheckout>
+							<tagNameFormat>v@{project.version}</tagNameFormat>
 						</configuration>
 					</plugin>
 				</plugins>
@@ -143,7 +152,8 @@
 		<connection>scm:git:git@bned-gitlab.blackned.intern:opensource/jdiameter.git</connection>
 		<developerConnection>scm:git:git@bned-gitlab.blackned.intern:opensource/jdiameter.git</developerConnection>
 		<url>http://bned-gitlab.blackned.intern/opensource/jdiameter</url>
-	</scm>
+	  <tag>HEAD</tag>
+  </scm>
 
 	<dependencies>
 		<dependency>
