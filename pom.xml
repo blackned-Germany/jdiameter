@@ -4,7 +4,7 @@
 
 	<groupId>org.mobicents.diameter</groupId>
 	<artifactId>diameter-parent</artifactId>
-	<version>1.6.5-SNAPSHOT</version>
+	<version>1.6.5</version>
 
 	<packaging>pom</packaging>
 
@@ -152,7 +152,8 @@
 		<connection>scm:git:git@bned-gitlab.blackned.intern:opensource/jdiameter.git</connection>
 		<developerConnection>scm:git:git@bned-gitlab.blackned.intern:opensource/jdiameter.git</developerConnection>
 		<url>http://bned-gitlab.blackned.intern/opensource/jdiameter</url>
-	</scm>
+	  <tag>v1.6.5</tag>
+  </scm>
 
 	<dependencies>
 		<dependency>
