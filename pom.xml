@@ -12,6 +12,10 @@
 	<description>Mobicents Diameter</description>
 	<url>http://code.google.com/p/jdiameter/</url>
 
+	<properties>
+		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+	</properties>
+
 	<ciManagement>
 		<system>Jenkins</system>
 		<url>http://bned-jenkins.blackned.intern:8080/view/3rd%20Party/job/jdiameter/</url>
@@ -65,9 +69,13 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-release-plugin</artifactId>
+						<version>2.5.1</version>
 						<configuration>
 							<autoVersionSubmodules>false</autoVersionSubmodules>
 							<resume>false</resume>
+							<pushChanges>false</pushChanges>
+							<localCheckout>true</localCheckout>
+							<tagNameFormat>v@{project.version}</tagNameFormat>
 						</configuration>
 					</plugin>
 				</plugins>
